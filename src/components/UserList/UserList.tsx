@@ -12,6 +12,7 @@ import {
   Item,
   Wrapper,
 } from "./UserList.styled";
+import UserCard from "../UserCard/UserCard";
 
 interface UserListProps {
   users: User[];
@@ -21,42 +22,7 @@ const UserList: React.FC<UserListProps> = ({ users }) => (
   <Wrapper>
     {users.map((user) => (
       <Item key={user.id}>
-        <CardWrapper>
-          <Link to={`/user/${user.id}`}>
-            <CardImageWrapper>
-              <CardImage src={"https://placekitten.com/640/360"} />
-            </CardImageWrapper>
-            <CardContent>{user.name}</CardContent>
-          </Link>
-
-          <CardFooter>
-            <CardIconWrapper href={`mailto:${user.email}`}>
-              <MailIcon
-                color="rgba(107, 114, 128, .70)"
-                width={20}
-                height={20}
-              />
-            </CardIconWrapper>
-            <CardIconWrapper href={`tel:${user.phone}`}>
-              <PhoneIcon
-                color="rgba(107, 114, 128, .70)"
-                width={20}
-                height={20}
-              />
-            </CardIconWrapper>
-            <CardIconWrapper
-              href={`https://www.google.com/maps/place/${user.address.geo.lng},${user.address.geo.lat}`}
-              target={"_blank"}
-              rel="noreferrer noopener"
-            >
-              <MapIcon
-                color="rgba(107, 114, 128, .70)"
-                width={20}
-                height={20}
-              />
-            </CardIconWrapper>
-          </CardFooter>
-        </CardWrapper>
+        <UserCard user={user} content={user.name} />
       </Item>
     ))}
   </Wrapper>

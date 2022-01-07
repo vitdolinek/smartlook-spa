@@ -13,6 +13,10 @@ const routes: Route[] = [
     name: "Users",
     path: "/users",
   },
+  {
+    name: "Posts",
+    path: "/posts",
+  },
 ];
 
 export { routes };

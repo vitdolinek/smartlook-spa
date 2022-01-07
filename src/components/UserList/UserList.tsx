@@ -1,17 +1,6 @@
 import React from "react";
 import { User } from "../../types/user";
-import { Link } from "react-router-dom";
-import { MailIcon, PhoneIcon, MapIcon } from "@heroicons/react/solid";
-import {
-  CardContent,
-  CardFooter,
-  CardIconWrapper,
-  CardImage,
-  CardImageWrapper,
-  CardWrapper,
-  Item,
-  Wrapper,
-} from "./UserList.styled";
+import { Item, Wrapper } from "./UserList.styled";
 import UserCard from "../UserCard/UserCard";
 
 interface UserListProps {

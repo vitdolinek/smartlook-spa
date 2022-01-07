@@ -1,4 +1,5 @@
 import React from "react";
+import UserList from "../../../components/UserList/UserList";
 import { User } from "../../../types/user";
 
 interface ListProps {
@@ -7,9 +8,7 @@ interface ListProps {
 
 const List: React.FC<ListProps> = ({ users }) => (
   <>
-    {users.map((user) => (
-      <div key={user.id}>{user.name}</div>
-    ))}
+    <UserList users={users} />
   </>
 );
 

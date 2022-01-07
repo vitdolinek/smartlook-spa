@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { User } from "../../types/user";
 import UserCard from "../UserCard/UserCard";
@@ -12,7 +13,9 @@ const UserList: React.FC<UserListProps> = ({ users }) => (
   <Wrapper>
     {users.map((user) => (
       <Item key={user.id}>
-        <UserCard user={user} content={user.name} />
+        <Link to={`/users/${user.id}`} style={{ display: "flex" }}>
+          <UserCard user={user} content={<b>{user.name}</b>} />
+        </Link>
       </Item>
     ))}
   </Wrapper>

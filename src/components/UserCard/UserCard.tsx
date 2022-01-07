@@ -1,6 +1,5 @@
 import { MailIcon, MapIcon, PhoneIcon } from "@heroicons/react/solid";
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { User } from "../../types/user";
 import {
@@ -19,12 +18,10 @@ interface UserCardProps {
 
 const UserCard: React.FC<UserCardProps> = ({ user, content }) => (
   <CardWrapper>
-    <Link to={`/users/${user.id}`}>
-      <CardImageWrapper>
-        <CardImage src={"https://placekitten.com/640/360"} />
-      </CardImageWrapper>
-      <CardContent>{content}</CardContent>
-    </Link>
+    <CardImageWrapper>
+      <CardImage src={"https://placekitten.com/640/360"} />
+    </CardImageWrapper>
+    <CardContent>{content}</CardContent>
 
     <CardFooter>
       <CardIconWrapper href={`mailto:${user.email}`}>

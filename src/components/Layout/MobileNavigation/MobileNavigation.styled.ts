@@ -21,14 +21,15 @@ export const Backdrop = styled.div`
   height: 100%;
   position: fixed;
   inset: 0;
-  overflow: hidden;
+  overflow: hidden !important;
   z-index: 100;
+  background-color: rgba(149, 157, 165, 0.3);
 `;
 
-export const MenuList = styled.ul`
+export const MenuList = styled.nav`
   background-color: white;
   position: absolute;
-  top: 60px;
+  top: 50px;
   right: 0;
   left: 0;
   list-style: none;
@@ -36,9 +37,13 @@ export const MenuList = styled.ul`
   margin: 0 30px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
+
+  @media (max-width: 600px) {
+    margin: 0 5px;
+  }
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled.div`
   padding: 0.75rem;
   margin: 0.5rem;
   border-radius: 5px;

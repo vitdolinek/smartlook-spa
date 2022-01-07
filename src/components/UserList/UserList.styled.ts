@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 
 export const Item = styled.div`
   width: calc(25% - 10px);
+  display: flex;
 
   @media (max-width: 900px) {
     width: calc(33.33% - 10px);

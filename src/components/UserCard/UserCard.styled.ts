@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   max-height: 100%;
   background-color: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -22,7 +24,7 @@ export const CardImage = styled.img`
 export const CardContent = styled.div`
   width: 100%;
   padding: 5px 0;
-  font-weight: 500;
+  flex: 1;
 `;
 
 export const CardFooter = styled.div`

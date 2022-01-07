@@ -16,8 +16,9 @@ const Profile: React.FC<ProfileProps> = ({ user }) => (
         user={user}
         content={
           <>
-            <p>{user.name}</p>
+            <b>{user.name}</b>
             <p>{user.website}</p>
+            <p>{user.address.city}</p>
           </>
         }
       />

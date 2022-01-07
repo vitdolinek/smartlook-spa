@@ -1,20 +1,19 @@
-import React, { useState } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { routes } from "../../../routes/routes";
 import {
   Backdrop,
   Hamburger,
   MenuItem,
   MenuList,
 } from "./MobileNavigation.styled";
-import { routes } from "../../../routes/routes";
 
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleMenuClick = (
-    _event: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
-  ) => setIsOpen(!isOpen);
+  const handleMenuClick = () => setIsOpen(!isOpen);
 
   return (
     <>

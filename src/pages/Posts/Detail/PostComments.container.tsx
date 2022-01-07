@@ -1,5 +1,7 @@
 import React from "react";
+
 import CommentList from "../../../components/CommentList/CommentList";
+import CommentListPlaceholder from "../../../components/CommentList/CommentList.placeholder";
 import { useFetch } from "../../../hooks/useFetch";
 import { Comment } from "../../../types/comment";
 
@@ -14,7 +16,7 @@ const PostCommentsContainer: React.FC<PostCommentsContainerProps> = ({
     url: `posts/${postId}/comments`,
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <CommentListPlaceholder />;
 
   if (error || !data) return <div>Error...</div>;
 

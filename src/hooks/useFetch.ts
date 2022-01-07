@@ -1,12 +1,13 @@
 import { HTTPError } from "ky";
 import { KyHeadersInit } from "ky/distribution/types/options";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import { api } from "../api/ky";
 
 interface UseFetchProps {
   url: string;
   method?: string;
-  body?: BodyInit;
+  body?: any;
   headers?: KyHeadersInit;
 }
 

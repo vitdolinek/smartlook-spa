@@ -1,6 +1,7 @@
 import React from "react";
+
 import { Post } from "../../../types/post";
-import { Wrapper, Title } from "./Detail.styled";
+import { Title, Wrapper } from "./Detail.styled";
 import { default as Comments } from "./PostComments.container";
 
 interface DetailProps {

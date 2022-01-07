@@ -1,12 +1,13 @@
 import React from "react";
+
 import { Comment } from "../../types/comment";
 import {
-  Item,
-  Wrapper,
-  SectionTitle,
-  Title,
   AuthorEmail,
   Body,
+  Item,
+  SectionTitle,
+  Title,
+  Wrapper,
 } from "./CommentList.styled";
 
 interface CommentListProps {
@@ -17,7 +18,7 @@ const CommentList: React.FC<CommentListProps> = ({ comments }) => (
   <Wrapper>
     <SectionTitle>Comments</SectionTitle>
     {comments.map((comment) => (
-      <Item>
+      <Item key={comment.id}>
         <AuthorEmail>{comment.email}</AuthorEmail>
         <Title>{comment.name}</Title>
         <Body>{comment.body}</Body>

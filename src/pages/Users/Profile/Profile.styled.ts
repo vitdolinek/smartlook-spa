@@ -8,9 +8,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Detail = styled.div`
-  max-width: calc(25% - 5px);
+  width: calc(25% - 5px);
 `;
 
 export const Posts = styled.div`
-  max-width: calc(75% - 5px);
+  width: calc(75% - 5px);
 `;

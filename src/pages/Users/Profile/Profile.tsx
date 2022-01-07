@@ -1,8 +1,9 @@
 import React from "react";
-import { default as UserPosts } from "./UserPosts.container";
+
+import UserCard from "../../../components/UserCard/UserCard";
 import { User } from "../../../types/user";
 import { Detail, Posts, Wrapper } from "./Profile.styled";
-import UserCard from "../../../components/UserCard/UserCard";
+import { default as UserPosts } from "./UserPosts.container";
 
 interface ProfileProps {
   user: User;

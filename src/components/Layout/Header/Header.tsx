@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+
 import DesktopNavigation from "../DesktopNavigation/DesktopNavigation";
-import { Wrapper } from "./Header.styled";
 import MobileNavigation from "../MobileNavigation/MobileNavigation";
+import { Wrapper } from "./Header.styled";
 
 const Header: React.FC = () => {
   const [isMobileResolution, setIsMobileResolution] = useState<boolean>(

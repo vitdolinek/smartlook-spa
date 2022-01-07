@@ -1,5 +1,7 @@
 import React from "react";
+
 import PostList from "../../../components/PostList/PostList";
+import PostListPlaceholder from "../../../components/PostList/PostList.placeholder";
 import { useFetch } from "../../../hooks/useFetch";
 import { Post } from "../../../types/post";
 
@@ -12,7 +14,7 @@ const UserPostsContainer: React.FC<UserPostsContainerProps> = ({ userId }) => {
     url: `user/${userId}/posts`,
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <PostListPlaceholder />;
 
   if (error || !data) return <div>Something went wrong...</div>;
 

@@ -1,6 +1,7 @@
 import React from "react";
+
 import { Post } from "../../types/post";
-import { Wrapper, PostItem, Title, LearnMore } from "./PostList.styled";
+import { LearnMore, PostItem, Title, Wrapper } from "./PostList.styled";
 
 interface PostListProps {
   posts: Post[];

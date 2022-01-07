@@ -1,7 +1,8 @@
 import React from "react";
+
 import { User } from "../../types/user";
-import { Item, Wrapper } from "./UserList.styled";
 import UserCard from "../UserCard/UserCard";
+import { Item, Wrapper } from "./UserList.styled";
 
 interface UserListProps {
   users: User[];

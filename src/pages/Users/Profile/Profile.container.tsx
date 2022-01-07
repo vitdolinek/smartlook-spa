@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+
 import { useFetch } from "../../../hooks/useFetch";
 import { User } from "../../../types/user";
 import Profile from "./Profile";
